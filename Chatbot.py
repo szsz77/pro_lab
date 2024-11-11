@@ -37,10 +37,10 @@ if prompt := st.chat_input(accept_file="multiple", file_type=["png", "jpg"]):
     st.session_state.messages.append({"role": "assistant"} | parsed_output)
 
     # debugging
-    st.write('CHATBOT DEBUGGING')
+    # st.write('CHATBOT DEBUGGING')
     # st.write('current situation for this conversation')
     # st.write(st.session_state.messages)
-    st.write(st.session_state.scenario_flag)
+    # st.write(st.session_state.scenario_flag)
     # st.write(st.session_state.preferences)
 
 

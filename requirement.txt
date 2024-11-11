@@ -1,0 +1,7 @@
+openai
+llama-index
+llama-index-embeddings-clip
+git+https://github.com/openai/CLIP.git
+kaggle
+streamlit-carousel
+qdrant_client

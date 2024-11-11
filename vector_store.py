@@ -1,7 +1,7 @@
 
 import qdrant_client
 from llama_index.core.readers import SimpleDirectoryReader
-from llama_index.vector_stores.qdrant import QdrantVectorStore
+# from llama_index.vector_stores.qdrant import QdrantVectorStore
 from llama_index.core import VectorStoreIndex, StorageContext, load_index_from_storage
 from llama_index.core.indices import MultiModalVectorStoreIndex
 

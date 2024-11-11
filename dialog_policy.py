@@ -83,7 +83,7 @@ def detect_scenario(message_history):
         else:
             scenario_flag = 'N/A'
 
-    st.write(scenario_class)
+    # st.write(scenario_class)
 
     return scenario_flag
 
@@ -157,7 +157,7 @@ def generate_response(message_history: list[dict]) -> dict:
             scenario_flag = detect_scenario(message_history)
             if scenario_flag != 'N/A':
                 st.session_state.scenario_flag = scenario_flag
-            st.write(scenario_flag)
+            # st.write(scenario_flag)
 
         slot_filling = preference_filler(message_history=message_history)
         st.session_state.preferences_history.append(slot_filling)

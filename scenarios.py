@@ -58,7 +58,7 @@ def information_collector_wrapper(message_history: list[dict]) -> dict:
 
     prompt = prompt + [{"role": "user", "content": user_info_history + '\n' + current_status + "\n FOLLOW UP QUESTION: "}]
 
-    st.write("CURRENT STATUS:", current_status)
+    # st.write("CURRENT STATUS:", current_status)
 
     # generate response
     response = client.chat.completions.create(model="gpt-4",
@@ -173,7 +173,7 @@ def seasonal_recommendation_wrapper(user_need, message_history):
         # check mood
         customer_mood = customer_satis_check(message_history=message_history)
         st.session_state.monitoring['satisfied_label'] = customer_mood
-        st.write(customer_mood)
+        # st.write(customer_mood)
 
         if customer_mood in ['not_satisfied', 'unknown']:
             retrieval_results = recommend_based_on_need(user_need)
@@ -235,7 +235,8 @@ def generate_image_description(images_info):
         try:
             images_meta.append("Product "+str(idx)+":\n"+" ".join([i[0]+': '+i[1] for i in image.items() if 'file' not in i[0] and 'date' not in i[0]]))
         except:
-            st.write(image)
+            pass
+            # st.write(image)
 
     prompt += [{"role": "user", "content": "we provide you with the following information: "+"\n\n".join(images_meta)}]
 
